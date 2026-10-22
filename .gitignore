@@ -1,0 +1,58 @@
+# --- Secrets / environment ---
+.env
+.env.*
+!.env.example
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+*.pfx
+*.key
+
+# --- OS / editors ---
+.DS_Store
+Thumbs.db
+.idea/
+.vs/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.suo
+*.user
+
+# --- .NET ---
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+TestResults/
+*.log
+*.nupkg
+.dotnet/
+publish/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+*.egg-info/
+
+# --- Rust ---
+target/
+**/*.rs.bk
+
+# --- Docker volumes / local data ---
+devops/data/
+storage/
+*.bak
+*.mdf
+*.ldf
+

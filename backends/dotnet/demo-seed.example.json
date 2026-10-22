@@ -1,0 +1,228 @@
+{
+  "management": {
+    "code": "MANAGEMENT",
+    "name": "Management",
+    "tenantAdmin": {
+      "userName": "admin",
+      "firstName": "System",
+      "lastName": "Administrator",
+      "roles": []
+    },
+    "companies": [
+      {
+        "code": "MANAGEMENT",
+        "name": "Management",
+        "applicationCode": "MANAGEMENT",
+        "companyAdmin": null,
+        "users": []
+      }
+    ]
+  },
+  "applications": [
+    {
+      "code": "RETAIL",
+      "name": "Retail",
+      "description": "Stores, products and orders",
+      "roles": [
+        {
+          "name": "Cashier",
+          "description": "Takes payments at the till",
+          "permissions": [
+            "TENANT_VIEW",
+            "USER_VIEW"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HOSPITALITY",
+      "name": "Hospitality",
+      "description": "Hotels, rooms and bookings",
+      "roles": [
+        {
+          "name": "Cashier",
+          "description": "Settles guest bills",
+          "permissions": [
+            "TENANT_VIEW"
+          ]
+        },
+        {
+          "name": "Receptionist",
+          "description": "Checks guests in and out",
+          "permissions": [
+            "TENANT_VIEW",
+            "USER_VIEW"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "LOGISTICS",
+      "name": "Logistics",
+      "description": "Shipments, vehicles and routes",
+      "roles": [
+        {
+          "name": "Dispatcher",
+          "description": "Plans routes and assigns vehicles",
+          "permissions": [
+            "TENANT_VIEW",
+            "UNIT_MANAGE"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "EDUCATION",
+      "name": "Education",
+      "description": "Courses, classes and students",
+      "roles": [
+        {
+          "name": "Teacher",
+          "description": "Runs classes",
+          "permissions": [
+            "TENANT_VIEW",
+            "SETTINGS_MANAGE"
+          ]
+        }
+      ]
+    }
+  ],
+  "tenants": [
+    {
+      "code": "ALPHA",
+      "name": "Alpha Group",
+      "tenantAdmin": {
+        "userName": "alpha.admin",
+        "firstName": "Alex",
+        "lastName": "Morgan",
+        "roles": []
+      },
+      "companies": [
+        {
+          "code": "ALPHA-RETAIL",
+          "name": "Alpha Retail",
+          "applicationCode": "RETAIL",
+          "companyAdmin": {
+            "userName": "alpha-retail.admin",
+            "firstName": "Riley",
+            "lastName": "Stone",
+            "roles": []
+          },
+          "users": [
+            {
+              "userName": "alpha-retail.user1",
+              "firstName": "Sam",
+              "lastName": "Carter",
+              "roles": [
+                "Staff",
+                "Cashier"
+              ]
+            },
+            {
+              "userName": "alpha-retail.user2",
+              "firstName": "Jamie",
+              "lastName": "Brooks",
+              "roles": []
+            }
+          ]
+        },
+        {
+          "code": "ALPHA-HOSPITALITY",
+          "name": "Alpha Hospitality",
+          "applicationCode": "HOSPITALITY",
+          "companyAdmin": {
+            "userName": "alpha-hospitality.admin",
+            "firstName": "Harper",
+            "lastName": "Reed",
+            "roles": []
+          },
+          "users": [
+            {
+              "userName": "alpha-hospitality.user1",
+              "firstName": "Drew",
+              "lastName": "Hayes",
+              "roles": [
+                "Staff",
+                "Cashier"
+              ]
+            },
+            {
+              "userName": "alpha-hospitality.user2",
+              "firstName": "Casey",
+              "lastName": "Lane",
+              "roles": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "BETA",
+      "name": "Beta Group",
+      "tenantAdmin": {
+        "userName": "beta.admin",
+        "firstName": "Blake",
+        "lastName": "Turner",
+        "roles": []
+      },
+      "companies": [
+        {
+          "code": "BETA-LOGISTICS",
+          "name": "Beta Logistics",
+          "applicationCode": "LOGISTICS",
+          "companyAdmin": {
+            "userName": "beta-logistics.admin",
+            "firstName": "Logan",
+            "lastName": "Fox",
+            "roles": []
+          },
+          "users": [
+            {
+              "userName": "beta-logistics.user1",
+              "firstName": "Morgan",
+              "lastName": "Webb",
+              "roles": [
+                "Staff",
+                "Dispatcher"
+              ]
+            },
+            {
+              "userName": "beta-logistics.user2",
+              "firstName": "Quinn",
+              "lastName": "Ellis",
+              "roles": []
+            }
+          ]
+        },
+        {
+          "code": "BETA-EDUCATION",
+          "name": "Beta Education",
+          "applicationCode": "EDUCATION",
+          "companyAdmin": {
+            "userName": "beta-education.admin",
+            "firstName": "Eden",
+            "lastName": "Price",
+            "roles": []
+          },
+          "users": [
+            {
+              "userName": "beta-education.user1",
+              "firstName": "Skyler",
+              "lastName": "Moore",
+              "roles": [
+                "Staff",
+                "Teacher"
+              ]
+            },
+            {
+              "userName": "beta-education.user2",
+              "firstName": "Rowan",
+              "lastName": "Cole",
+              "roles": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

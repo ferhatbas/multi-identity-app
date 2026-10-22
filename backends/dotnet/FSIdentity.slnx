@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/FSIdentity.Api/FSIdentity.Api.csproj" />
+    <Project Path="src/FSIdentity.Domain/FSIdentity.Domain.csproj" />
+    <Project Path="src/FSIdentity.Identity/FSIdentity.Identity.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/FSIdentity.Tests/FSIdentity.Tests.csproj" />
+  </Folder>
+</Solution>

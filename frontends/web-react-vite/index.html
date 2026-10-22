@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+    <!-- The PrimeReact theme; ThemeContext swaps this file for the dark one. Built by `npm run theme`. -->
+    <link id="theme-link" rel="stylesheet" href="/themes/fs-light.css" />
+    <script>
+      // Pick the stored (or system) theme before the first paint, so a dark-theme user does not see a light flash.
+      try {
+        var t = localStorage.getItem('fsi.theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.getElementById('theme-link').href = '/themes/fs-' + t + '.css';
+      } catch (e) { /* the light theme stays */ }
+    </script>
+    <title>FSIdentity</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

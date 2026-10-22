@@ -1,0 +1,9 @@
+@FSIdentity.Api_HostAddress = http://localhost:5231
+
+GET {{FSIdentity.Api_HostAddress}}/api/country/paged?pageSize=5&orderBy=name&search=tur
+Accept: application/json
+
+GET {{FSIdentity.Api_HostAddress}}/api/language
+Accept: application/json
+
+###
