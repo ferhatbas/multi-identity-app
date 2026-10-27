@@ -4,7 +4,6 @@
 
 Almost every business application starts by rebuilding the same things: sign-in, users, roles and permissions, tenants and companies, an audit trail, a menu and a dashboard per person. `multi-identity-app` is that foundation as a ready-made, tested product. It defines **one API contract**, one database schema and one JWT format, and implements them independently in several languages, so you can pick the stack you like, start from a working system, and swap backends or frontends without touching the rest.
 
-[![CI](https://github.com/ferhatbas/multi-identity-app/actions/workflows/ci.yml/badge.svg)](https://github.com/ferhatbas/multi-identity-app/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![.NET 10](https://img.shields.io/badge/.NET-10-512bd4)
 ![React 19](https://img.shields.io/badge/React-19-61dafb)
