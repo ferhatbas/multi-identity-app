@@ -4,6 +4,27 @@
 
 Almost every business application starts by rebuilding the same things: sign-in, users, roles and permissions, tenants and companies, an audit trail, a menu and a dashboard per person. `multi-identity-app` is that foundation as a ready-made, tested product. It defines **one API contract**, one database schema and one JWT format, and implements them independently in several languages, so you can pick the stack you like, start from a working system, and swap backends or frontends without touching the rest.
 
+[![CI](https://github.com/ferhatbas/multi-identity-app/actions/workflows/ci.yml/badge.svg)](https://github.com/ferhatbas/multi-identity-app/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![.NET 10](https://img.shields.io/badge/.NET-10-512bd4)
+![React 19](https://img.shields.io/badge/React-19-61dafb)
+
+<img src="assets/screenshots/dashboard.png" alt="multi-identity-app dashboard" width="100%">
+
+**Who it is for:** teams building a multi-tenant business application (SaaS, internal tools, vertical software) who want sign-in, users, permissions, organisation, audit and a working admin console on day one instead of month three.
+
+## Quick start
+
+Needs only Git and Docker.
+
+```bash
+git clone https://github.com/ferhatbas/multi-identity-app.git && cd multi-identity-app/devops
+cp .env.example .env            # then set MSSQL_SA_PASSWORD and JWT_KEY (see Installation)
+docker compose up -d --build && docker compose run --rm --entrypoint "dotnet FSIdentity.Api.dll --seed-demo" api-setup
+```
+
+Open <http://localhost:3041> and sign in as `admin` (demo password below). Call the API from code: see [`examples/`](examples/).
+
 ---
 
 ## What you get
@@ -242,7 +263,7 @@ The full contract is [`contracts/api-envelope.md`](contracts/api-envelope.md); t
 
 ## Contributing
 
-Issues and pull requests are welcome. Please keep to the contract: a change to the API starts in `contracts/`, and the OpenAPI snapshot test must stay green (`UPDATE_OPENAPI=1 dotnet test --filter OpenApiSnapshotTests` regenerates it on purpose). User-facing text is written in English; the English sentence is the translation key, and `npm run i18n` shows what a language file is missing.
+See [`CONTRIBUTING.md`](CONTRIBUTING.md); security reports go through [`SECURITY.md`](SECURITY.md). Issues and pull requests are welcome. Please keep to the contract: a change to the API starts in `contracts/`, and the OpenAPI snapshot test must stay green (`UPDATE_OPENAPI=1 dotnet test --filter OpenApiSnapshotTests` regenerates it on purpose). User-facing text is written in English; the English sentence is the translation key, and `npm run i18n` shows what a language file is missing.
 
 ## License
 
