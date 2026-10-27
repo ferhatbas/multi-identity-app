@@ -13,6 +13,8 @@ jobs:
       - uses: actions/setup-dotnet@v4
         with:
           global-json-file: backends/dotnet/global.json
+      - name: Throwaway JWT key for this run
+        run: echo "Jwt__Key=$(openssl rand -hex 32)" >> "$GITHUB_ENV"
       - run: dotnet test backends/dotnet/tests/FSIdentity.Tests
 
   web:
